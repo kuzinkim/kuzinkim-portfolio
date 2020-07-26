@@ -1,0 +1,174 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+    animation: pop-in-right .6s 1.2s ease forwards;
+    @include media-breakpoint-down(mobile) {
+        position: fixed;
+        background-color: #fff;
+        color: #000;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        align-items: center;
+        @include media-breakpoint-down(mobile) {
+            padding: 13px 0px;
+        }
+    }
+    &__menu{
+        margin-right: -25px;
+        @include media-breakpoint-down(mobile) {
+            position: fixed;
+            top: 50px;
+            padding: 60px 20px 0; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+            background-color: #fff;
+            color: #000;
+        }
+        &-link{
+            display: inline-block;
+            margin-right: 25px;
+            font-size: 14px;
+            padding: 8px 0;
+            font-weight: 600;
+            line-height: 24px;
+            text-transform: uppercase;
+            position: relative;
+            @include media-breakpoint-down(mobile) {
+                display: block;
+                margin-right: 0;
+                text-align: center;
+                font-size: 18px;
+                padding: 0;
+                margin-bottom: 20px;
+                
+            }
+            &::after{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #ea1538;
+                content: '';
+                opacity: 0;
+                transition: opacity 0.3s, transform 0.3s;
+                transform: translateY(10px);
+                pointer-events: none;
+            }
+            &:hover::after{
+                opacity: 1;
+                transform: translateY(0px);
+                @include media-breakpoint-down(mobile) {
+                    opacity: 0;   
+                }
+            }
+        }
+        &.active{
+            transform: translateX(0);
+        }
+    }
+    &__logo{
+        font-size: 20px;
+        font-weight: 700;
+        display: inline-block;
+        line-height: 24px;
+        position: relative;
+        &::after{
+            content: attr(data-hover);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            max-width: 0;
+            color: red;
+            transition: max-width 0.3s ease;
+        }
+        &:hover::after{
+            max-width: 100%;
+        }
+    }
+    &.is-transition{
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+}
+.header.is-fixed {
+    position: fixed;
+    .burg__line,
+    .burg__line:nth-child(2)::after{
+        background-color: #000;
+    }
+    .burg.active{
+        .burg__line:nth-child(2),
+        .burg__line:nth-child(2)::after{
+            background-color: #000;
+        } 
+    }
+}
+.header.is-show,
+.header.is-hide {
+    background-color: #fff;
+    color: #000;
+    transition: transform 0.3s ease 0s;
+}
+.header.is-hide {
+    transform: translateY(-110%);  
+}
+.header.is-show{
+    transform: translateY(0%);
+}
+
+.burg {
+    display: none;
+    width: 18px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    transition: opacity .3s ease 0s;
+    &__line,
+    &__line:nth-child(2)::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 5px;
+        background-color: #000;
+        transition: transform .3s,opacity .2s;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &.active{
+        .burg__line:first-child{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        .burg__line:nth-child(2) {
+            transform: rotate(45deg);
+            background-color: #000;
+        }
+        .burg__line:nth-child(2)::after {
+            transform: rotate(-90deg);
+            background-color: #000;
+        }
+        .burg__line:nth-child(3) {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+    @include media-breakpoint-down(mobile) {
+        display: block;
+        margin-top: -5px;
+    }
+}
