@@ -1,0 +1,15 @@
+.title{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    display: inline-block;
+    &::after{
+        content: '';
+        width: 100%;
+        display: block;
+        background-color: #ea1538;
+        height: 4px;
+        margin-top: 10px;
+    }
+}

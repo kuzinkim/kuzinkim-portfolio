@@ -24,8 +24,9 @@
     <div class="wrapper">
       <div class="header">
         <div class="container">
-          <div class="header__wrapper"><a class="header__logo" href="#" data-hover="kuzinkim">kuzinkim</a>
-            <nav class="header__menu js-menu"><a class="header__menu-link" href="#">Home</a><a class="header__menu-link" href="#">About</a><a class="header__menu-link" href="#">Skils</a></nav>
+          <div class="header__wrapper">
+            <div class="js-menu"><a class="header__logo" href="#main" data-hover="kuzinkim">kuzinkim</a></div>
+            <nav class="header__menu js-menu"><a class="header__menu-link" href="#main">Главная</a><a class="header__menu-link" href="#about">Обо Мне</a><a class="header__menu-link" href="#portfolio">Кейсы</a></nav>
             <div class="header__burger burg js-burg">
               <div class="burg__line"></div>
               <div class="burg__line"></div>
@@ -34,15 +35,44 @@
           </div>
         </div>
       </div>
-      <div class="main">
+      <div class="main" id="main">
         <div class="container">
           <div class="main__wrapper">
-            <h1 class="main__title animate-pop-in">Kim Kuzin</h1>
-            <p class="main__description animate-pop-in">I'm front-end developer with a passion for learning.</p><a class="main__button button animate-pop-in" href="#contact">Подробнее</a>
+            <h1 class="main__title animate-pop-in">Ким Кузин</h1>
+            <p class="main__description animate-pop-in">Я фронтенд-разработчик.</p><p class="main__description animate-pop-in">Занимаюсь разработкой 2 года. За это время реализовал с нуля более 10 проектов.</p>
+            <div class="js-menu"> <a class="main__button button animate-pop-in" href="#about">Подробнее</a></div>
           </div>
         </div>
         <div class="social"><span class="social__text">Social Links</span>
           <div class="social__group"><a class="social__group-item" href="https://vk.com/kuzinkim" target="_blank"><i class="fab fa-vk"></i></a><a class="social__group-item" href="https://www.instagram.com/kuzinkim/" target="_blank"><i class="fa fa-instagram"></i></a><a class="social__group-item" href="https://tlgg.ru//kimkuzin" target="_blank"><i class="fab fa-telegram-plane"></i></a><a class="social__group-item" href="https://github.com/kuzinkim" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+      </div>
+      <div class="about" id="about">
+        <div class="container">
+          <div class="about__title title">Обо Мне</div>
+          <div class="about__inner">
+            <div class="about__pic" style="background-image: url('assets/images/about.jpg')"></div>
+            <div class="about__text"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero eum delectus autem enim nam, omnis ducimus facilis accusantium eos nihil cumque mollitia, cum ea est id iste explicabo odio. Corporis?</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="portfolio__title title">Кейсы</div>
+          <div class="portfolio__inner">
+            <div class="portfolio__item" style="background-image: url(assets/images/arturbanderos1.jpg)"></div>
+            <div class="portfolio__item" style="background-image: url(assets/images/artActive.jpg)"></div>
+            <div class="portfolio__item"></div>
+            <div class="portfolio__item"></div>
+            <div class="portfolio__item"></div>
+            <div class="portfolio__item"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__inner"><a class="footer__item" href="https://vk.com/kuzinkim" target="_blank"><i class="fab fa-vk"></i></a><a class="footer__item" href="https://www.instagram.com/kuzinkim/" target="_blank"><i class="fa fa-instagram"></i></a><a class="footer__item" href="https://tlgg.ru//kimkuzin" target="_blank"><i class="fab fa-telegram-plane"></i></a><a class="footer__item" href="https://github.com/kuzinkim" target="_blank"><i class="fab fa-github"> </i></a></div>
+          <div class="footer__copyright"><span>kuzinkim</span></div>
         </div>
       </div>
     </div>

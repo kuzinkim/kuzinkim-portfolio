@@ -10,7 +10,7 @@
 /**
  * Elements
  */
-// @import '../elements/title/title'; 
+@import '../elements/title/title'; 
 
 
 /**
@@ -19,6 +19,9 @@
 
 @import '../components/header/header';
 @import '../components/main/main';
+@import '../components/about/about';
+@import '../components/portfolio/portfolio';
+@import '../components/footer/footer';
 
 
 

@@ -54,4 +54,11 @@ $(document).ready(function () {
             $(this).siblings('.header__logo').addClass('is-color')
         }
     })
+
+    $(".js-menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
 });

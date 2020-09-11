@@ -1,0 +1,22 @@
+.portfolio{
+    padding: 50px 0 0;
+    background-color: #000;
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item{
+        width: calc((100% / 3) - 10px);
+        background-color: #fff;
+        margin-bottom: 15px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &::after{
+            content: '';
+            padding-top: 70%;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.about{
+    background-color: #000;
+    padding: 50px 0 0;
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__pic{
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-right: 40px;
+        &::after{
+            content: '';
+            padding-top: 100%;
+            display: block;
+        }
+    }
+    &__text{
+        width: 50%;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
