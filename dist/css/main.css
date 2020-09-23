@@ -26,12 +26,24 @@
   .hidden-tablet-up {
     display: none !important; } }
 
-@media (max-width: 1279px) {
+@media (max-width: 1023px) {
   .hidden-tablet-down {
     display: none !important; } }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hidden-tablet-only {
+    display: none !important; } }
+
+@media (min-width: 1024px) {
+  .hidden-tablet-l-up {
+    display: none !important; } }
+
+@media (max-width: 1279px) {
+  .hidden-tablet-l-down {
+    display: none !important; } }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hidden-tablet-l-only {
     display: none !important; } }
 
 @media (min-width: 1280px) {
@@ -165,6 +177,10 @@ img {
   font-weight: 500;
   margin-bottom: 25px;
   display: inline-block; }
+  @media (max-width: 1023px) {
+    .title {
+      display: block;
+      text-align: center; } }
   .title::after {
     content: '';
     width: 100%;
@@ -406,7 +422,7 @@ img {
     width: 920px;
     margin: 0 auto;
     max-width: 100%; }
-    @media (max-width: 1279px) {
+    @media (max-width: 1023px) {
       .main__wrapper {
         padding: 0 30px; } }
   .main__title {
@@ -446,7 +462,7 @@ img {
     opacity: 0;
     -webkit-animation: pop-in-right .6s 1.2s ease forwards;
             animation: pop-in-right .6s 1.2s ease forwards; }
-    @media (max-width: 1279px) {
+    @media (max-width: 1023px) {
       .main .social {
         position: static;
         -webkit-transform: rotate(0);
@@ -493,13 +509,13 @@ img {
         -webkit-transform: translateZ(0) rotate(-90deg);
                 transform: translateZ(0) rotate(-90deg);
         color: #ea1538; }
-        @media (max-width: 1279px) {
+        @media (max-width: 1023px) {
           .main .social__group-item:hover {
             -webkit-transform: rotate(0);
                 -ms-transform: rotate(0);
                     transform: rotate(0);
             color: #fff; } }
-      @media (max-width: 1279px) {
+      @media (max-width: 1023px) {
         .main .social__group-item:active {
           -webkit-transform: scale(1.2);
               -ms-transform: scale(1.2);
@@ -634,20 +650,30 @@ img {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 1023px) {
+      .about__inner {
+        display: block; } }
   .about__pic {
     width: 50%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     margin-right: 40px; }
+    @media (max-width: 1023px) {
+      .about__pic {
+        width: 100%; } }
     .about__pic::after {
       content: '';
       padding-top: 100%;
       display: block; }
   .about__text {
     width: 50%;
-    font-size: 20px;
-    line-height: 40px; }
+    font-size: 18px;
+    line-height: 32px; }
+    @media (max-width: 1023px) {
+      .about__text {
+        width: 100%;
+        margin-top: 20px; } }
 
 .portfolio {
   padding: 50px 0 0;
@@ -674,6 +700,13 @@ img {
     background-repeat: no-repeat;
     cursor: pointer;
     position: relative; }
+    @media (max-width: 1023px) {
+      .portfolio__item {
+        width: -webkit-calc(50% - 10px);
+        width: calc(50% - 10px); } }
+    @media (max-width: 767px) {
+      .portfolio__item {
+        width: 100%; } }
     .portfolio__item-wrapper {
       position: absolute;
       top: 50%;
@@ -695,7 +728,18 @@ img {
       margin-top: 15px; }
     .portfolio__item-link {
       display: inline-block;
-      margin-right: 10px; }
+      margin-right: 10px;
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: -webkit-transform 0.2s ease;
+      -o-transition: transform 0.2s ease;
+      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0); }
+      .portfolio__item-link:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2); }
     .portfolio__item::after {
       content: '';
       padding-top: 70%;

@@ -4,6 +4,10 @@
     font-weight: 500;
     margin-bottom: 25px;
     display: inline-block;
+    @include media-breakpoint-down(tablet) {
+        display: block;
+        text-align: center;
+    }
     &::after{
         content: '';
         width: 100%;
