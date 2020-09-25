@@ -133,6 +133,14 @@
     opacity: 0;
 }
 
+.main__text{
+    animation-delay: 0.8s;
+    font-size: 40px;
+    @include media-breakpoint-down(mobile) {
+        font-size: 18px;
+    }
+}
+
 .main__title{
     animation-delay: 1s;
 }
